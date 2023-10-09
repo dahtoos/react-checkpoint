@@ -1,8 +1,19 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
-import { Card, Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap"; // Import Bootstrap components
+import {
+  Card,
+  Button,
+  Container,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Form,
+  Row,
+  Col,
+} from "react-bootstrap"; // Import Bootstrap components
 import Apple from "./assets/apple.jpeg"; // Import image asset
 import Chair from "./assets/chair.jpg"; // Import image asset
-import './App.css'; // Import custom CSS
+import "./App.css"; // Import custom CSS
+
 
 const App = () => {
   return (
@@ -17,6 +28,20 @@ const App = () => {
               <Nav className="me-auto">
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#link">Link</Nav.Link>
+                <Form inline>
+                  <Row>
+                    <Col xs="auto">
+                      <Form.Control
+                        type="text"
+                        placeholder="Search"
+                        className=" mr-sm-2"
+                      />
+                    </Col>
+                    <Col xs="auto">
+                      <Button type="submit">Submit</Button>
+                    </Col>
+                  </Row>
+                </Form>
                 {/* NavDropdown component */}
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
